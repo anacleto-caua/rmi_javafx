@@ -171,7 +171,7 @@ public class HostController implements Initializable {
 
         vboxContainer.getChildren().add(mediaView);
 
-        mediaPlayer.setAutoPlay(true);
+        mediaPlayer.setAutoPlay(false);
 
         // --- Crucial step: Pass the MediaPlayer to the remote service ---
         if (videoRemoteService != null) {
@@ -219,7 +219,7 @@ public class HostController implements Initializable {
                 if (mediaPlayer != null) {
                     mediaPlayer.stop();
                 }
-                initViewVideo();
+                // initViewVideo();
             }
         });
     }
