@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" 
+            stylesheets="@style/styleController.css" styleClass="main-container" fx:controller="com.controller.ControlController">
+    
+    <Pane styleClass="science-particle-1" AnchorPane.topAnchor="60" AnchorPane.rightAnchor="100" />
+    <Pane styleClass="science-particle-2" AnchorPane.bottomAnchor="120" AnchorPane.leftAnchor="80" />
+    <Pane styleClass="science-particle-3" AnchorPane.topAnchor="200" AnchorPane.leftAnchor="150" />
+    <Pane styleClass="floating-molecule" AnchorPane.topAnchor="30" AnchorPane.leftAnchor="30" />
+    <Pane styleClass="floating-molecule" AnchorPane.bottomAnchor="40" AnchorPane.rightAnchor="60" />
+    <Pane styleClass="floating-molecule" AnchorPane.topAnchor="180" AnchorPane.rightAnchor="200" />
+    
+    <VBox alignment="CENTER" spacing="0" AnchorPane.bottomAnchor="20" AnchorPane.leftAnchor="20" 
+          AnchorPane.rightAnchor="20" AnchorPane.topAnchor="20">
+        
+        <VBox alignment="CENTER" spacing="15" styleClass="header-section">
+            <HBox alignment="CENTER" spacing="15">
+                <Label styleClass="science-icon" text="🔬" />
+                <Label styleClass="control-title" text="SCIENCE CONTROL" />
+            </HBox>
+            <Label styleClass="control-subtitle" text="Centro de Comando das Estações Científicas Interativas" />
+            <Pane styleClass="tech-line" />
+        </VBox>
+        
+        <HBox spacing="40" alignment="CENTER" VBox.vgrow="ALWAYS">
+            
+            <VBox spacing="25" alignment="TOP_CENTER" HBox.hgrow="ALWAYS">
+                
+                <GridPane hgap="20" vgap="20" alignment="CENTER" styleClass="stations-grid" fx:id="cardsGrid"> 
+                    
+                </GridPane>
+            </VBox>
+            
+            <VBox spacing="0" alignment="TOP_CENTER" prefWidth="400" HBox.hgrow="NEVER" fx:id="control">
+                <VBox styleClass="control-panel" alignment="CENTER">
+                    <Label fx:id="controlHeader" styleClass="control-header" text="SELECIONE UMA ESTAÇÃO" />
+                    <Label fx:id="controlSubtitle" styleClass="control-subtitle-panel" 
+                           text="Escolha uma estação para ver as ações disponíveis" />
+                    
+                    <VBox fx:id="actionsContainer" spacing="15" alignment="CENTER">
+                        <Label text="Nenhuma estação selecionada" 
+                               style="-fx-font-size: 16px; -fx-text-fill: #71717a; -fx-font-style: italic;" />
+                    </VBox>
+                </VBox>
+            </VBox>
+        </HBox>
+    </VBox>
+</AnchorPane>
